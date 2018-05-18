@@ -1,0 +1,8 @@
+#!/bin/bash
+
+alias ll="ls -lah"
+alias dir="ls -lah"
+alias vi=vim
+
+# rails
+alias sander='rails console --sandbox'
