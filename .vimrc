@@ -38,20 +38,19 @@ set autowrite
 match ErrorMsg '\s\+$'
 
 "Fix leading and trailing white space on write
-"func! FixWS()
-"  let l = line(".")
-"  let c = col(".")
-"  %s/\s\+$//e
-"  set fileformat=unix
-"  retab "need expandtab and tabstop set above for this to do as intended
-"  call cursor(l, c)
-"endfunc
+func! FixWS()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  set fileformat=unix
+  retab "need expandtab and tabstop set above for this to do as intended
+  call cursor(l, c)
+endfunc
 
-"autocmd BufWritePre Dockerfile,*.{c,cc,cpp,h,py,xml,java,js,rb,sh,txt,rtf} :call FixWS()
+autocmd BufWritePre Dockerfile,*.{c,cc,cpp,h,py,xml,java,js,rb,sh,txt,rtf} :call FixWS()
+
 " xmllint formatting options for xml filetypes
 autocmd FileType xml exe "let &l:equalprg='xmllint--format -'"
-
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 set splitbelow
 set splitright
@@ -63,7 +62,6 @@ nnoremap <C-Right> <C-w><right>
 
 inoremap <C-A> <Home>
 inoremap <C-E> <End>
-
 
 " auto set paste mode
 " https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
