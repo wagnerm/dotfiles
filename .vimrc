@@ -10,14 +10,14 @@ syntax on
 " Mouse selection and highlighting
 " set ttymouse=xterm2
 " set mouse=ar
-if has('mouse')
-  set mouse=a
-endif
+" if has('mouse')
+"   set mouse=a
+" endif
 " If linux then set ttymouse
-let s:uname = system("echo -n \"$(uname)\"")
-if !v:shell_error && s:uname == "Linux" && !has('nvim')
-  set ttymouse=xterm
-endif
+" let s:uname = system("echo -n \"$(uname)\"")
+" if !v:shell_error && s:uname == "Linux" && !has('nvim')
+"   set ttymouse=xterm
+" endif
 
 set nowrap
 
