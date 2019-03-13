@@ -6,3 +6,6 @@ alias vi=vim
 
 # rails
 alias sander='rails console --sandbox'
+
+# hub
+alias git='hub'
