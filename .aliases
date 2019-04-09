@@ -9,3 +9,4 @@ alias sander='rails console --sandbox'
 
 # hub
 alias git='hub'
+alias git-pr='hub pull-request --edit'
