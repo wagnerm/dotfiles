@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "Nord",
+    "explorer.autoReveal": false,
+    "files.insertFinalNewline": true,
+    "workbench.activityBar.visible": true,
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true
+}
