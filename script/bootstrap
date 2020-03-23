@@ -6,7 +6,7 @@ for file in $(find $(pwd) -name ".*" -not -name ".gitignore" -not -name ".git" -
 
 	if [ "$(uname -s)" = "Darwin" ]; then
 		ln -sfn $file $HOME/$f; \
-	else
-		cp $file $HOME/$f
+	#else
+	#	cp $file $HOME/$f
 	fi
 done;
