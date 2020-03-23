@@ -1,1 +1,12 @@
-../Makefile
+#!/bin/bash
+
+for file in $(find $(pwd) -name ".*" -not -name ".gitignore" -not -name ".git" -not -name ".*.swp"); do \
+    f=$(basename $file); \
+	echo $file $HOME/$f; \
+
+	if [ "$(uname -s)" = "Darwin" ]; then
+		ln -sfn $file $HOME/$f; \
+	else
+		cp $file $HOME/$f
+	fi
+done;
