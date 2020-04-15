@@ -15,4 +15,5 @@ if [ "$(uname -s)" = "Darwin" ]; then
 	eval "$(nodenv init -)"
 else
 	source ~/.aliases
+	source ~/.exports
 fi
