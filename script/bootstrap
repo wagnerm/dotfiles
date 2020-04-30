@@ -8,6 +8,6 @@ if [ "$(uname -s)" = "Darwin" ]; then
 	done;
 else
 	cat .gitconfig.linux >> $HOME/.gitconfig
-	cp .bash_profile .aliases $HOME/
+	cp .bash_profile .aliases .bashrc $HOME/
 	cp .exports-dev $HOME/.exports
 fi
