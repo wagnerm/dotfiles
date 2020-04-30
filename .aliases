@@ -12,6 +12,6 @@ alias gp='git push origin `git head`'
 
 # hub
 if [ -f /usr/local/bin/hub ]; then
-	alias git='hub'
-	alias git-pr='hub pull-request --edit'
+  alias git='hub'
+  alias git-pr='hub pull-request --edit'
 fi
