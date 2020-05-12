@@ -13,7 +13,4 @@ if [ "$(uname -s)" = "Darwin" ]; then
 
   eval "$(rbenv init -)"
   eval "$(nodenv init -)"
-else
-  source ~/.aliases
-  source ~/.exports
 fi
