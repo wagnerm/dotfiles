@@ -1,13 +1,18 @@
 #!/bin/bash
 
+dotdir=$(cd $(dirname $0) && pwd)
+
 if [ "$(uname -s)" = "Darwin" ]; then
-	for file in $(find $(pwd) -name ".*" -not -name ".gitignore" -not -name ".git" -not -name ".*.swp"); do \
-    	f=$(basename $file); \
-		echo $file $HOME/$f; \
-		ln -sfn $file $HOME/$f; \
-	done;
+  for file in $(find $(pwd) -name ".*" -not -name ".gitignore" -not -name ".git" -not -name ".*.swp"); do
+    f="$(basename $file)"
+    echo "ln -sfn $file $HOME/$f"
+  done
 else
-	cat .gitconfig.linux >> $HOME/.gitconfig
-	cp .bash_profile .aliases .bashrc $HOME/
-	cp .exports-dev $HOME/.exports
+  for file in $(find $(pwd) -name ".*" -not -name ".exports" -not -name ".gitconfig" -not -name ".gitignore" -not -name ".git" -not -name ".*.swp"); do
+    f="$(basename $file)"
+    echo "ln -sfn $file $HOME/$f"
+  done
+
+  cat .gitconfig.linux >> $HOME/.gitconfig
+  ln -sfn "$dotdir/linux/.exports" "$HOME/.exports"
 fi
