@@ -1,9 +1,16 @@
 {
-    "workbench.colorTheme": "Nord",
+    "workbench.colorTheme": "Solarized Light",
     "explorer.autoReveal": false,
     "files.insertFinalNewline": true,
     "workbench.activityBar.visible": true,
     "editor.renderWhitespace": "boundary",
     "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true
+    "files.trimFinalNewlines": true,
+    "window.zoomLevel": 0,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.rename.enablePreview": false,
+    "workbench.list.openMode": "doubleClick",
+    "editor.tabSize": 2,
+    "explorer.confirmDragAndDrop": false
 }
