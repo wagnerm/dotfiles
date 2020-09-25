@@ -142,3 +142,5 @@ set ts=4
 :autocmd Filetype scala set softtabstop=2
 :autocmd Filetype scala set sw=2
 :autocmd Filetype scala set ts=2
+
+iabbrev CAB Co-authored-by: first last <name@github.com>
