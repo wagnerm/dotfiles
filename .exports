@@ -12,3 +12,4 @@ export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PA
 export PATH="$HOME/.cargo/bin:$PATH"
 export GO111MODULE=on
 export GOPATH=$HOME/go
+export REM_CLI_NOTES_PATH=~/Google Drive/rem_notes.txt
