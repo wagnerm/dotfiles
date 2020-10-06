@@ -1,6 +1,7 @@
 [alias]
     cat = show
     co = checkout
+	ca = commit --amend
     ff = pull --ff-only
     logg = log --decorate=full --graph
     loggs = log --decorate=full --graph --pretty=format:'%h %an <%ae> %cD%n%n%s%n'
@@ -25,10 +26,12 @@
     latestbranches = for-each-ref --sort=committerdate refs/heads/
     clutter = ls-files --others --exclude-standard
     patches = log --topo-order --no-merges
+[commit]
+	verbose = true
 [core]
     abbrev = 10
     longpaths = true
 [color]
     branch = true
     diff = true
-    interactive = fa
+	#interactive = fa
