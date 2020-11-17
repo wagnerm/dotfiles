@@ -8,6 +8,12 @@ if [ "$(uname -s)" = "Darwin" ]; then
     ln -sfn $file $HOME/$f
   done
 else
+  if [ "$HOME" == "/workspace" ]; then
+    wget https://github.com/sharkdp/bat/releases/download/v0.16.0/bat_0.16.0_amd64.deb -O bat.deb
+	sudo dpkg -i bat.deb
+	rm bat.deb
+  fi
+
   for file in $(find $dotdir -name ".*" -not -name ".exports" -not -name ".gitconfig" -not -name ".gitignore" -not -name ".git" -not -name ".*.swp"); do
     f="$(basename $file)"
     ln -sfn $file $HOME/$f
