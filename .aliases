@@ -17,3 +17,7 @@ if [ -f /usr/local/bin/hub ]; then
 fi
 
 alias rem="~/.cargo/bin/rem-cli"
+
+alias gsup='git branch --set-upstream-to=origin/`git head` `git head`'
+
+alias cat='bat --theme GitHub -n'
