@@ -14,3 +14,5 @@ if [ "$(uname -s)" = "Darwin" ]; then
   eval "$(rbenv init -)"
   eval "$(nodenv init -)"
 fi
+
+set -o vi
