@@ -31,3 +31,5 @@ function watch() {
 	done
 }
 alias watch=watch $@
+
+alias k="kubectl"
