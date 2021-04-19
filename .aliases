@@ -33,3 +33,6 @@ function watch() {
 alias watch=watch $@
 
 alias k="kubectl"
+
+alias ca="code --add ."
+alias cad="code --add"
