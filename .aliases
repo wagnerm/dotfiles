@@ -20,17 +20,10 @@ alias rem="~/.cargo/bin/rem-cli"
 
 alias gsup='git branch --set-upstream-to=origin/`git head` `git head`'
 
-alias cat='bat --theme Nord -n'
-#alias cat='bat --theme GitHub -n'
+# alias cat='bat --theme Nord -n'
+# alias cat='bat --theme GitHub -n'
 
 alias inflate="ruby -r zlib -e \"STDOUT.write Zlib::Inflate.inflate(STDIN.read)\""
-
-function watch() {
-    while true; do
-		$@; sleep 1
-	done
-}
-alias watch=watch $@
 
 alias k="kubectl"
 
