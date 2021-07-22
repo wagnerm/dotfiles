@@ -14,11 +14,17 @@ else
 # 	rm bat.deb
 #   fi
 
-  for file in $(find $dotdir -name ".*" -not -name ".exports" -not -name ".gitconfig" -not -name ".gitignore" -not -name ".git" -not -name ".*.swp"); do
+  for file in $(find $dotdir -name ".*" -not -name ".bashrc" -not -name ".exports" -not -name ".gitconfig" -not -name ".gitignore" -not -name ".git" -not -name ".*.swp"); do
     f="$(basename $file)"
     ln -sfn $file $HOME/$f
   done
 
   cat "$dotdir/linux/.gitconfig" >> "$HOME/.gitconfig"
   ln -sfn "$dotdir/linux/.exports" "$HOME/.exports"
+
+  # Login shell is currently broken in CODESPACES for some reason, so hack around it.
+  set -x
+  if [ "$CODESPACES" == "true" ]; then
+    cat "$dotdir/linux/.bashrc" >> "$HOME/.bashrc"
+  fi
 fi
