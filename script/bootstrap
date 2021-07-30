@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 dotdir=$(cd $(dirname $0)/../ && pwd)
 
 # Always link to .zprofile for all envs.
@@ -11,11 +13,11 @@ if [ "$(uname -s)" = "Darwin" ]; then
     ln -sfn $file $HOME/$f
   done
 else
-#   if [ "$HOME" == "/workspace" ]; then
-#     wget https://github.com/sharkdp/bat/releases/download/v0.16.0/bat_0.16.0_amd64.deb -O bat.deb
-# 	sudo dpkg -i bat.deb
-# 	rm bat.deb
-#   fi
+  if [ "$HOME" == "/workspace" || "$CODESPACES" == "true" ]; then
+    wget https://github.com/sharkdp/bat/releases/download/v0.16.0/bat_0.16.0_amd64.deb -O bat.deb
+	  sudo dpkg -i bat.deb
+	  rm bat.deb
+  fi
 
   cat "$dotdir/linux/.gitconfig" >> "$HOME/.gitconfig"
 
