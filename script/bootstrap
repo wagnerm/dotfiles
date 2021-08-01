@@ -19,10 +19,9 @@ else
 	  rm bat.deb
   fi
 
-  cat "$dotdir/linux/.gitconfig" >> "$HOME/.gitconfig"
-
-  ln -sfn "$dotdir/linux/.aliases" "$HOME/.aliases"
-  ln -sfn "$dotdir/linux/.exports" "$HOME/.exports"
+  cat "$dotdir/.gitconfig" >> "$HOME/.gitconfig"
+  ln -sfn "$dotdir/.aliases" "$HOME/.aliases"
+  ln -sfn "$dotdir/.exports" "$HOME/.exports"
 
   # Login shell is currently broken in CODESPACES for some reason, so hack around it.
   if [ "$CODESPACES" == "true" ]; then
