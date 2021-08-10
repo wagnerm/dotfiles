@@ -11,6 +11,10 @@ if [ "$(uname -s)" = "Darwin" ]; then
 
   eval "$(rbenv init -)"
   eval "$(nodenv init -)"
+
+  if [ $(uname -m) = "arm64" ]; then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
 fi
 
 set -o vi
