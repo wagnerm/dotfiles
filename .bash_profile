@@ -13,8 +13,13 @@ fi
 
 set -o vi
 
-for file in ~/.{aliases,exports}; do
+for file in ~/.{aliases,exports,env}; do
   if [[ -r "$file" ]] && [[ -f "$file" ]]; then
     source "$file"
   fi
 done
+
+if [ "$SHELL" = "/bin/zsh" ]; then
+	bindkey "^[[H" beginning-of-line
+    bindkey "^[[F" end-of-line
+fi
