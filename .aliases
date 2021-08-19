@@ -9,6 +9,7 @@ alias sander='rails console --sandbox'
 
 # git
 alias gp='git push origin `git head`'
+alias gpu='git push --set-upstream origin `git head`'
 
 # hub
 if [ -f /usr/local/bin/hub ]; then
