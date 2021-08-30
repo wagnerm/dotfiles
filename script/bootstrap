@@ -5,7 +5,7 @@ set -x
 dotdir=$(cd $(dirname $0)/../ && pwd)
 
 # Always link to .zprofile for all envs.
-ln -sfn "$dotdir/.bash_profile" "$HOME/.zprofile"
+ln -sfn "$dotdir/.bash_profile" "$HOME/.zshrc"
 
 if [ "$(uname -s)" = "Darwin" ]; then
   for file in $(find $dotdir -name ".*" -not -name ".gitignore" -not -name ".git" -not -name ".*.swp"); do
