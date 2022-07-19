@@ -1,6 +1,12 @@
 #!/bin/bash
 
-export EDITOR=/usr/bin/vim
+
+if [ "$TERM_PROGRAM" = "vscode" ]; then
+  export EDITOR="code --wait"
+else
+  export EDITOR=/usr/bin/vim
+fi
+
 export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
