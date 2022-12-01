@@ -1,7 +1,8 @@
 [alias]
     cat = show
     co = checkout
-	ca = commit --amend
+    ca = commit --amend
+    can = commit --amend --no-edit
     ff = pull --ff-only
     logg = log --decorate=full --graph
     loggs = log --decorate=full --graph --pretty=format:'%h %an <%ae> %cD%n%n%s%n'
