@@ -19,6 +19,6 @@ else
 
   # Login shell is currently broken in CODESPACES for some reason, so hack around it.
   if [[ "$CODESPACES" == "true" ]]; then
-    cat "$dotdir/.bash_profile" | tee -a "$HOME/.bashrc"
+    # cat "$dotdir/.bash_profile" | tee -a "$HOME/.bashrc"
   fi
 fi
