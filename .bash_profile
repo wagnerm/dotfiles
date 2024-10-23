@@ -11,7 +11,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
 
   eval "$(rbenv init -)"
   eval "$(nodenv init -)"
-elif [ "$(uname -s)" = "Linux" ]; then
+elif [ "$(uname -s)" = "Linux" ] && [ "$CODESPACES" != "true" ]; then
   # include .bashrc if it exists
   if [ -f "$HOME/.bashrc" ]; then
 	. "$HOME/.bashrc"

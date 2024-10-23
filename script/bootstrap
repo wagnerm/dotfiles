@@ -18,7 +18,7 @@ else
   ln -sfn "$dotdir/.exports" "$HOME/.exports"
 
   # Login shell is currently broken in CODESPACES for some reason, so hack around it.
-  if [[ "$CODESPACES" == "true" ]]; then
-    # cat "$dotdir/.bash_profile" | tee -a "$HOME/.bashrc"
+  if [ "$CODESPACES" == "true" ]; then
+    cat "$dotdir/.bash_profile" | tee -a "$HOME/.bashrc"
   fi
 fi
