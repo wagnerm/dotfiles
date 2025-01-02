@@ -144,3 +144,17 @@ set ts=4
 :autocmd Filetype scala set ts=2
 
 iabbrev CAB Co-authored-by: first last <name@github.com>
+
+set incsearch
+set backspace=indent,eol,start
+set complete-=i
+set scrolloff=1
+
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
+
+if &history < 1000
+  set history=1000
+endif

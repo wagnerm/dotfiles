@@ -30,3 +30,9 @@ alias k="kubectl"
 
 alias ca="code --add ."
 alias cad="code --add"
+
+alias python="/usr/bin/python3"
+
+alias azvm="az vm list-sizes --location eastus --output table"
+
+alias exc="chmod +x"
