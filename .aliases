@@ -31,7 +31,6 @@ alias k="kubectl"
 alias ca="code --add ."
 alias cca="/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code --add ."
 alias cad="code --add"
-<<<<<<< HEAD
 
 alias python="/usr/bin/python3"
 
